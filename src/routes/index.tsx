@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore — raw HTML import
-import indexHtml from "../../public/index.html?raw";
+// @ts-expect-error raw HTML import
+import indexHtml from "../home.html?raw";
 
 export const Route = createFileRoute("/")({
   server: {
