@@ -303,7 +303,7 @@ Implement LocalBusiness schema on all pages:
   "telephone": "(305) 494-5820",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "19401 W Dixie Hwy, APT 236",
+    "streetAddress": "2660 NE 192nd Terr",
     "addressLocality": "Miami",
     "addressRegion": "FL",
     "postalCode": "33180",
@@ -380,7 +380,7 @@ Maintain consistent Name, Address, and Phone information across all pages:
 ```ruby
 # app/views/shared/_footer.html.erb
 <div class="contact-info">
-  <p><i class="fas fa-map-marker-alt"></i> 19401 W Dixie Hwy, APT 236<br>Miami, FL 33180</p>
+  <p><i class="fas fa-map-marker-alt"></i> 2660 NE 192nd Terr<br>Miami, FL 33180</p>
   <p><i class="fas fa-phone"></i> (305) 494-5820</p>
   <p><i class="fas fa-envelope"></i> david@messeriadjusting.com</p>
 </div>
@@ -485,7 +485,7 @@ Add Service schema to each service page:
     "name": "Messeri & Associates, LLC",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "19401 W Dixie Hwy, APT 236",
+      "streetAddress": "2660 NE 192nd Terr",
       "addressLocality": "Miami",
       "addressRegion": "FL",
       "postalCode": "33180",

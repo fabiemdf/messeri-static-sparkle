@@ -176,7 +176,7 @@ end
   <div style="text-align: center; padding: 20px; font-size: 12px; color: #666;">
     <p>
       Messeri & Associates, LLC<br>
-      19401 W Dixie Hwy, APT 236<br>
+      2660 NE 192nd Terr<br>
       Miami, FL 33180<br>
       (305) 494-5820
     </p>
@@ -307,7 +307,7 @@ end
   <div style="text-align: center; padding: 20px; font-size: 12px; color: #666;">
     <p>
       Messeri & Associates, LLC<br>
-      19401 W Dixie Hwy, APT 236<br>
+      2660 NE 192nd Terr<br>
       Miami, FL 33180<br>
       (305) 494-5820
     </p>
@@ -362,7 +362,7 @@ end
   <div style="text-align: center; padding: 20px; font-size: 12px; color: #666;">
     <p>
       Messeri & Associates, LLC<br>
-      19401 W Dixie Hwy, APT 236<br>
+      2660 NE 192nd Terr<br>
       Miami, FL 33180<br>
       (305) 494-5820
     </p>
@@ -412,7 +412,7 @@ end
   <div style="text-align: center; padding: 20px; font-size: 12px; color: #666;">
     <p>
       Messeri & Associates, LLC<br>
-      19401 W Dixie Hwy, APT 236<br>
+      2660 NE 192nd Terr<br>
       Miami, FL 33180<br>
       (305) 494-5820
     </p>
