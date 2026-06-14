@@ -1856,3 +1856,155 @@ textarea.form-control {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* ===== Header phone CTA ===== */
+.header-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--secondary-color);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.header-phone:hover { background-color: #c96a25; transform: translateY(-1px); }
+.header-phone i { font-size: 1.4rem; }
+
+@media (max-width: 768px) {
+  .header-phone { display: none; }
+}
+
+/* ===== Sticky mobile CTA bar ===== */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 999;
+  background: #fff;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+  padding: 0.8rem;
+  gap: 0.8rem;
+}
+.mobile-cta-bar a {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.4rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.mobile-cta-bar .cta-call { background: var(--primary-color); color: #fff; }
+.mobile-cta-bar .cta-quote { background: var(--secondary-color); color: #fff; }
+.mobile-cta-bar .cta-call:hover { background: #002244; }
+.mobile-cta-bar .cta-quote:hover { background: #c96a25; }
+
+@media (max-width: 768px) {
+  .mobile-cta-bar { display: flex; }
+  body { padding-bottom: 72px; }
+}
+
+/* ===== FAQ section ===== */
+.faq-section { padding: 8rem 0; background: var(--light-color); }
+.faq-grid {
+  max-width: 850px;
+  margin: 4rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.faq-item {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 2rem 2.4rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 2.4rem;
+  color: var(--secondary-color);
+  transition: transform 0.3s;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-answer {
+  padding: 0 2.4rem 2rem;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* ===== Results / case cards ===== */
+.results-section { padding: 8rem 0; }
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.4rem;
+  margin-top: 4rem;
+}
+.result-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 3rem 2.4rem;
+  border-top: 4px solid var(--secondary-color);
+}
+.result-card .result-type {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.result-card .result-numbers {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+.result-card .result-initial {
+  font-size: 1.6rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+.result-card .result-final {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: 'Montserrat', sans-serif;
+}
+.result-card .result-narrative {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+.result-disclaimer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  color: var(--text-light);
+  font-style: italic;
+}
