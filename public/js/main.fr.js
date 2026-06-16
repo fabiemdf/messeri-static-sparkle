@@ -17,12 +17,12 @@ class HeroSlider {
         this.slides = [
             {
                 image: 'img/hero-1.jpg.jpg',
-                title: 'Une défense stratégique pour votre réclamation d'assurance',
-                subtitle: 'Un accompagnement expert dans l'univers complexe des sinistres d'assurance'
+                title: "Une défense stratégique pour votre réclamation d'assurance",
+                subtitle: "Un accompagnement expert dans l'univers complexe des sinistres d'assurance"
             },
             {
                 image: 'img/hero-2.jpg.jpg',
-                title: 'Maximisez votre indemnisation d'assurance',
+                title: "Maximisez votre indemnisation d'assurance",
                 subtitle: 'Une représentation professionnelle pour obtenir chaque dollar que vous méritez'
             },
             {
