@@ -1879,6 +1879,64 @@ textarea.form-control {
   .header-phone { display: none; }
 }
 
+/* ===== Language switcher & French badge ===== */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.lang-switch a {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.lang-switch a:hover { background-color: var(--light-color); }
+.lang-switch a.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.lang-switch .sep { color: var(--border-color); }
+
+.fr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1.2rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 51, 102, 0.08);
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.fr-badge::before { content: "🇫🇷"; font-size: 1.4rem; line-height: 1; }
+
+@media (max-width: 900px) {
+  .fr-badge { display: none; }
+}
+
+/* Hero banner: We speak French */
+.hero-fr-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+  padding: 0.8rem 1.6rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: var(--box-shadow);
+}
+.hero-fr-banner::before { content: "🇫🇷"; font-size: 1.8rem; line-height: 1; }
+
 /* ===== Sticky mobile CTA bar ===== */
 .mobile-cta-bar {
   display: none;
