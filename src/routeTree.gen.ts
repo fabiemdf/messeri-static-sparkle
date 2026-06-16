@@ -11,6 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as FrRouteImport } from './routes/fr'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FrTermsRouteImport } from './routes/fr.terms'
+import { Route as FrServicesRouteImport } from './routes/fr.services'
+import { Route as FrPrivacyRouteImport } from './routes/fr.privacy'
+import { Route as FrContactRouteImport } from './routes/fr.contact'
+import { Route as FrClaimsRouteImport } from './routes/fr.claims'
+import { Route as FrBlogRouteImport } from './routes/fr.blog'
+import { Route as FrAboutRouteImport } from './routes/fr.about'
 
 const FrRoute = FrRouteImport.update({
   id: '/fr',
@@ -22,31 +29,115 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrTermsRoute = FrTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrServicesRoute = FrServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrPrivacyRoute = FrPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrContactRoute = FrContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrClaimsRoute = FrClaimsRouteImport.update({
+  id: '/claims',
+  path: '/claims',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBlogRoute = FrBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrAboutRoute = FrAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => FrRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/fr': typeof FrRoute
+  '/fr': typeof FrRouteWithChildren
+  '/fr/about': typeof FrAboutRoute
+  '/fr/blog': typeof FrBlogRoute
+  '/fr/claims': typeof FrClaimsRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/privacy': typeof FrPrivacyRoute
+  '/fr/services': typeof FrServicesRoute
+  '/fr/terms': typeof FrTermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/fr': typeof FrRoute
+  '/fr': typeof FrRouteWithChildren
+  '/fr/about': typeof FrAboutRoute
+  '/fr/blog': typeof FrBlogRoute
+  '/fr/claims': typeof FrClaimsRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/privacy': typeof FrPrivacyRoute
+  '/fr/services': typeof FrServicesRoute
+  '/fr/terms': typeof FrTermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/fr': typeof FrRoute
+  '/fr': typeof FrRouteWithChildren
+  '/fr/about': typeof FrAboutRoute
+  '/fr/blog': typeof FrBlogRoute
+  '/fr/claims': typeof FrClaimsRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/privacy': typeof FrPrivacyRoute
+  '/fr/services': typeof FrServicesRoute
+  '/fr/terms': typeof FrTermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/fr'
+  fullPaths:
+    | '/'
+    | '/fr'
+    | '/fr/about'
+    | '/fr/blog'
+    | '/fr/claims'
+    | '/fr/contact'
+    | '/fr/privacy'
+    | '/fr/services'
+    | '/fr/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/fr'
-  id: '__root__' | '/' | '/fr'
+  to:
+    | '/'
+    | '/fr'
+    | '/fr/about'
+    | '/fr/blog'
+    | '/fr/claims'
+    | '/fr/contact'
+    | '/fr/privacy'
+    | '/fr/services'
+    | '/fr/terms'
+  id:
+    | '__root__'
+    | '/'
+    | '/fr'
+    | '/fr/about'
+    | '/fr/blog'
+    | '/fr/claims'
+    | '/fr/contact'
+    | '/fr/privacy'
+    | '/fr/services'
+    | '/fr/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  FrRoute: typeof FrRoute
+  FrRoute: typeof FrRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +156,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fr/terms': {
+      id: '/fr/terms'
+      path: '/terms'
+      fullPath: '/fr/terms'
+      preLoaderRoute: typeof FrTermsRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/services': {
+      id: '/fr/services'
+      path: '/services'
+      fullPath: '/fr/services'
+      preLoaderRoute: typeof FrServicesRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/privacy': {
+      id: '/fr/privacy'
+      path: '/privacy'
+      fullPath: '/fr/privacy'
+      preLoaderRoute: typeof FrPrivacyRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/contact': {
+      id: '/fr/contact'
+      path: '/contact'
+      fullPath: '/fr/contact'
+      preLoaderRoute: typeof FrContactRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/claims': {
+      id: '/fr/claims'
+      path: '/claims'
+      fullPath: '/fr/claims'
+      preLoaderRoute: typeof FrClaimsRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog': {
+      id: '/fr/blog'
+      path: '/blog'
+      fullPath: '/fr/blog'
+      preLoaderRoute: typeof FrBlogRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/about': {
+      id: '/fr/about'
+      path: '/about'
+      fullPath: '/fr/about'
+      preLoaderRoute: typeof FrAboutRouteImport
+      parentRoute: typeof FrRoute
+    }
   }
 }
 
+interface FrRouteChildren {
+  FrAboutRoute: typeof FrAboutRoute
+  FrBlogRoute: typeof FrBlogRoute
+  FrClaimsRoute: typeof FrClaimsRoute
+  FrContactRoute: typeof FrContactRoute
+  FrPrivacyRoute: typeof FrPrivacyRoute
+  FrServicesRoute: typeof FrServicesRoute
+  FrTermsRoute: typeof FrTermsRoute
+}
+
+const FrRouteChildren: FrRouteChildren = {
+  FrAboutRoute: FrAboutRoute,
+  FrBlogRoute: FrBlogRoute,
+  FrClaimsRoute: FrClaimsRoute,
+  FrContactRoute: FrContactRoute,
+  FrPrivacyRoute: FrPrivacyRoute,
+  FrServicesRoute: FrServicesRoute,
+  FrTermsRoute: FrTermsRoute,
+}
+
+const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  FrRoute: FrRoute,
+  FrRoute: FrRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
