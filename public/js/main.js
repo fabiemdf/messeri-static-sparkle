@@ -17,18 +17,18 @@ class HeroSlider {
         this.slides = [
             {
                 image: 'img/hero-1.jpg.jpg',
-                title: 'Strategic Advocacy for Your Insurance Claim',
-                subtitle: 'Expert guidance through the complex world of insurance claims'
+                title: 'Florida Public Adjuster for Denied, Underpaid & Complex Property Claims',
+                subtitle: 'David Messeri represents homeowners, commercial property owners, and associations throughout Florida.'
             },
             {
                 image: 'img/hero-2.jpg.jpg',
-                title: 'Maximize Your Insurance Settlement',
-                subtitle: 'Professional representation to ensure you receive every dollar you deserve'
+                title: 'Detailed Claim Documentation for Florida Property Owners',
+                subtitle: 'We inspect the loss, prepare estimates, organize the evidence, and communicate with the carrier on your behalf.'
             },
             {
                 image: 'img/hero-3.jpg.jpg',
-                title: 'Your Trusted Claims Advocate',
-                subtitle: 'Dedicated to protecting your interests and securing fair compensation'
+                title: 'A Clear Path Through a Complex Property Claim',
+                subtitle: 'Policyholder advocacy led personally by licensed Florida public adjuster David Messeri.'
             }
         ];
         this.currentSlide = 0;
@@ -84,7 +84,7 @@ class HeroSlider {
     updateContent() {
         const currentSlideData = this.slides[this.currentSlide];
         const titleElement = this.heroContent.querySelector('h1');
-        const subtitleElement = this.heroContent.querySelector('p');
+        const subtitleElement = this.heroContent.querySelector('.hero-summary') || this.heroContent.querySelector('p');
 
         // Add fade-out effect
         titleElement.style.opacity = '0';
@@ -160,12 +160,9 @@ function initApp() {
     });
   }
 
-  // Auto-rotate testimonials
-  startSlideInterval();
-
-  // Stop auto-rotation on hover
   const testimonialSlider = document.querySelector('.testimonials-slider');
-  if (testimonialSlider) {
+  if (testimonialSlider && slides.length > 0 && slides.length === dots.length) {
+    startSlideInterval();
     testimonialSlider.addEventListener('mouseenter', () => {
       clearInterval(slideInterval);
     });
@@ -209,6 +206,8 @@ function changeSlide(direction) {
 
 // Go to Specific Slide
 function goToSlide(index) {
+  if (!slides[index] || !dots[index]) return;
+
   slides.forEach(slide => slide.classList.remove('active'));
   dots.forEach(dot => dot.classList.remove('active'));
   

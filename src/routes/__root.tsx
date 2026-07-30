@@ -77,16 +77,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Messeri & Associates | Florida Public Insurance Adjusters" },
-      { name: "description", content: "Florida licensed public insurance adjusters. Strategic advocacy for hurricane, flood, fire, and water damage claims. Maximize your settlement." },
-      { property: "og:title", content: "Messeri & Associates | Florida Public Insurance Adjusters" },
-      { property: "og:description", content: "Florida licensed public insurance adjusters. Strategic advocacy for hurricane, flood, fire, and water damage claims. Maximize your settlement." },
+      { title: "Messeri & Associates | Florida Property Claim Services" },
+      {
+        name: "description",
+        content:
+          "Florida policyholder representation, insurance appraisal, umpire, and technical claim consulting led by David Messeri.",
+      },
+      { property: "og:title", content: "Messeri & Associates | Florida Property Claim Services" },
+      {
+        property: "og:description",
+        content:
+          "Florida policyholder representation, insurance appraisal, umpire, and technical claim consulting led by David Messeri.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Messeri & Associates | Florida Public Insurance Adjusters" },
-      { name: "twitter:description", content: "Florida licensed public insurance adjusters. Strategic advocacy for hurricane, flood, fire, and water damage claims. Maximize your settlement." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/771affc0-8c5c-44f7-835f-193cf2b4da4a/id-preview-54bfba3f--c71fc0bf-3958-45a9-bc68-985a8e37b1f9.lovable.app-1781220940838.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/771affc0-8c5c-44f7-835f-193cf2b4da4a/id-preview-54bfba3f--c71fc0bf-3958-45a9-bc68-985a8e37b1f9.lovable.app-1781220940838.png" },
+      { name: "twitter:title", content: "Messeri & Associates | Florida Property Claim Services" },
+      {
+        name: "twitter:description",
+        content:
+          "Florida policyholder representation, insurance appraisal, umpire, and technical claim consulting led by David Messeri.",
+      },
+      { property: "og:image", content: "https://messeriassociates.com/img/hero-1.jpg.jpg" },
+      { name: "twitter:image", content: "https://messeriassociates.com/img/hero-1.jpg.jpg" },
     ],
     links: [
       {
@@ -95,7 +107,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
