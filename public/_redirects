@@ -1,0 +1,56 @@
+# Primary English pages
+/index.html / 301
+/index2.html / 301
+/Default.html / 301
+/about.html /about 301
+/services.html /services 301
+/claims.html /claims 301
+/claims_submission.html /claims 301
+/blog.html /blog 301
+/blog-post.html /blog 301
+/blog-page-2.html /blog/page/2 301
+/blog-page-3.html /blog/page/3 301
+/contact.html /contact 301
+/privacy.html /privacy 301
+/terms.html /terms 301
+/hurricane.html /services#hurricane 301
+/testimonial-page.html /about 301
+/testimonials-page.html /about 301
+/template.html / 301
+
+# Blog articles
+/blog/2025-hurricane-season-forecast.html /blog/2025-hurricane-season-forecast 301
+/blog/5-things-insurance-companies-dont-want-you-to-know.html /blog/5-things-insurance-companies-dont-want-you-to-know 301
+/blog/communicating-with-insurance-companies.html /blog/communicating-with-insurance-companies 301
+/blog/documenting-property-damage-after-fire.html /blog/documenting-property-damage-after-fire 301
+/blog/essential-documentation-for-insurance-claims.html /blog/essential-documentation-for-insurance-claims 301
+/blog/essential-documentation-insurance-claims.html /blog/essential-documentation-for-insurance-claims 301
+/blog/florida-insurance-laws-changes.html /blog/florida-insurance-laws-changes 301
+/blog/hidden-costs-water-damage.html /blog/hidden-costs-water-damage 301
+/blog/insurance-appraisal-blog.html /blog/insurance-appraisal-blog 301
+/blog/insurance-appraisal-process.html /blog/insurance-appraisal-process 301
+/blog/insurance-claim-process.html /blog/insurance-claim-process 301
+/blog/insurance-claim-timeline.html /blog/insurance-claim-timeline 301
+/blog/negotiating-with-insurance-companies.html /blog/negotiating-with-insurance-companies 301
+/blog/understanding-flood-insurance-policy.html /blog/understanding-flood-insurance-policy 301
+/blog/why-insurance-carriers-deny-roof-damage-claims.html /blog/why-insurance-carriers-deny-roof-damage-claims 301
+
+# Blog categories
+/blog/category/hurricane-season.html /blog/category/hurricane-season 301
+/blog/category/insurance-claims.html /blog/category/insurance-claims 301
+/blog/category/insurance-laws.html /blog/category/insurance-laws 301
+/blog/category/property-damage.html /blog/category/property-damage 301
+/blog/category/water-damage.html /blog/category/water-damage 301
+
+# Normalize trailing slashes on canonical pages
+/about/ /about 301
+/services/ /services 301
+/claims/ /claims 301
+/blog/ /blog 301
+/contact/ /contact 301
+/privacy/ /privacy 301
+/terms/ /terms 301
+/fr/ /fr 301
+/locations/ /locations 301
+/fr/locations/ /fr/locations 301
+/professional-services/ /professional-services/appraisal 301

@@ -10,7 +10,15 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ClaimsRouteImport } from './routes/claims'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FrRouteImport } from './routes/fr'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as FrAboutRouteImport } from './routes/fr.about'
 import { Route as FrBlogRouteImport } from './routes/fr.blog'
 import { Route as FrClaimsRouteImport } from './routes/fr.claims'
@@ -30,6 +38,9 @@ import { Route as ProfessionalServicesIndexRouteImport } from './routes/professi
 import { Route as ProfessionalServicesAppraisalRouteImport } from './routes/professional-services.appraisal'
 import { Route as ProfessionalServicesExpertWitnessRouteImport } from './routes/professional-services.expert-witness'
 import { Route as ProfessionalServicesUmpireRouteImport } from './routes/professional-services.umpire'
+import { Route as BlogCategoryCategoryRouteImport } from './routes/blog.category.$category'
+import { Route as BlogPage2RouteImport } from './routes/blog.page.2'
+import { Route as BlogPage3RouteImport } from './routes/blog.page.3'
 import { Route as FrLocationsIndexRouteImport } from './routes/fr.locations.index'
 import { Route as FrLocationsFortLauderdaleRouteImport } from './routes/fr.locations.fort-lauderdale'
 import { Route as FrLocationsMiamiRouteImport } from './routes/fr.locations.miami'
@@ -44,10 +55,50 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClaimsRoute = ClaimsRouteImport.update({
+  id: '/claims',
+  path: '/claims',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FrRoute = FrRouteImport.update({
   id: '/fr',
   path: '/fr',
   getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
 } as any)
 const FrAboutRoute = FrAboutRouteImport.update({
   id: '/about',
@@ -148,6 +199,21 @@ const ProfessionalServicesUmpireRoute =
     path: '/professional-services/umpire',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogCategoryCategoryRoute = BlogCategoryCategoryRouteImport.update({
+  id: '/category/$category',
+  path: '/category/$category',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogPage2Route = BlogPage2RouteImport.update({
+  id: '/page/2',
+  path: '/page/2',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogPage3Route = BlogPage3RouteImport.update({
+  id: '/page/3',
+  path: '/page/3',
+  getParentRoute: () => BlogRoute,
+} as any)
 const FrLocationsIndexRoute = FrLocationsIndexRouteImport.update({
   id: '/locations/',
   path: '/locations/',
@@ -193,7 +259,15 @@ const FrLocationsWestPalmBeachRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/claims': typeof ClaimsRoute
+  '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/privacy': typeof PrivacyRoute
+  '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/fr/about': typeof FrAboutRoute
   '/fr/blog': typeof FrBlogRoute
   '/fr/claims': typeof FrClaimsRoute
@@ -213,6 +287,9 @@ export interface FileRoutesByFullPath {
   '/professional-services/umpire': typeof ProfessionalServicesUmpireRoute
   '/locations/': typeof LocationsIndexRoute
   '/professional-services/': typeof ProfessionalServicesIndexRoute
+  '/blog/category/$category': typeof BlogCategoryCategoryRoute
+  '/blog/page/2': typeof BlogPage2Route
+  '/blog/page/3': typeof BlogPage3Route
   '/fr/locations/fort-lauderdale': typeof FrLocationsFortLauderdaleRoute
   '/fr/locations/miami': typeof FrLocationsMiamiRoute
   '/fr/locations/naples': typeof FrLocationsNaplesRoute
@@ -224,7 +301,15 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/claims': typeof ClaimsRoute
+  '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/privacy': typeof PrivacyRoute
+  '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/fr/about': typeof FrAboutRoute
   '/fr/blog': typeof FrBlogRoute
   '/fr/claims': typeof FrClaimsRoute
@@ -244,6 +329,9 @@ export interface FileRoutesByTo {
   '/professional-services/umpire': typeof ProfessionalServicesUmpireRoute
   '/locations': typeof LocationsIndexRoute
   '/professional-services': typeof ProfessionalServicesIndexRoute
+  '/blog/category/$category': typeof BlogCategoryCategoryRoute
+  '/blog/page/2': typeof BlogPage2Route
+  '/blog/page/3': typeof BlogPage3Route
   '/fr/locations/fort-lauderdale': typeof FrLocationsFortLauderdaleRoute
   '/fr/locations/miami': typeof FrLocationsMiamiRoute
   '/fr/locations/naples': typeof FrLocationsNaplesRoute
@@ -256,7 +344,15 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/claims': typeof ClaimsRoute
+  '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/privacy': typeof PrivacyRoute
+  '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/fr/about': typeof FrAboutRoute
   '/fr/blog': typeof FrBlogRoute
   '/fr/claims': typeof FrClaimsRoute
@@ -276,6 +372,9 @@ export interface FileRoutesById {
   '/professional-services/umpire': typeof ProfessionalServicesUmpireRoute
   '/locations/': typeof LocationsIndexRoute
   '/professional-services/': typeof ProfessionalServicesIndexRoute
+  '/blog/category/$category': typeof BlogCategoryCategoryRoute
+  '/blog/page/2': typeof BlogPage2Route
+  '/blog/page/3': typeof BlogPage3Route
   '/fr/locations/fort-lauderdale': typeof FrLocationsFortLauderdaleRoute
   '/fr/locations/miami': typeof FrLocationsMiamiRoute
   '/fr/locations/naples': typeof FrLocationsNaplesRoute
@@ -289,7 +388,15 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/blog'
+    | '/claims'
+    | '/contact'
     | '/fr'
+    | '/privacy'
+    | '/services'
+    | '/terms'
+    | '/blog/$slug'
     | '/fr/about'
     | '/fr/blog'
     | '/fr/claims'
@@ -309,6 +416,9 @@ export interface FileRouteTypes {
     | '/professional-services/umpire'
     | '/locations/'
     | '/professional-services/'
+    | '/blog/category/$category'
+    | '/blog/page/2'
+    | '/blog/page/3'
     | '/fr/locations/fort-lauderdale'
     | '/fr/locations/miami'
     | '/fr/locations/naples'
@@ -320,7 +430,15 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
+    | '/blog'
+    | '/claims'
+    | '/contact'
     | '/fr'
+    | '/privacy'
+    | '/services'
+    | '/terms'
+    | '/blog/$slug'
     | '/fr/about'
     | '/fr/blog'
     | '/fr/claims'
@@ -340,6 +458,9 @@ export interface FileRouteTypes {
     | '/professional-services/umpire'
     | '/locations'
     | '/professional-services'
+    | '/blog/category/$category'
+    | '/blog/page/2'
+    | '/blog/page/3'
     | '/fr/locations/fort-lauderdale'
     | '/fr/locations/miami'
     | '/fr/locations/naples'
@@ -351,7 +472,15 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/blog'
+    | '/claims'
+    | '/contact'
     | '/fr'
+    | '/privacy'
+    | '/services'
+    | '/terms'
+    | '/blog/$slug'
     | '/fr/about'
     | '/fr/blog'
     | '/fr/claims'
@@ -371,6 +500,9 @@ export interface FileRouteTypes {
     | '/professional-services/umpire'
     | '/locations/'
     | '/professional-services/'
+    | '/blog/category/$category'
+    | '/blog/page/2'
+    | '/blog/page/3'
     | '/fr/locations/fort-lauderdale'
     | '/fr/locations/miami'
     | '/fr/locations/naples'
@@ -383,7 +515,14 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRouteWithChildren
+  ClaimsRoute: typeof ClaimsRoute
+  ContactRoute: typeof ContactRoute
   FrRoute: typeof FrRouteWithChildren
+  PrivacyRoute: typeof PrivacyRoute
+  ServicesRoute: typeof ServicesRoute
+  TermsRoute: typeof TermsRoute
   LocationsFortLauderdaleRoute: typeof LocationsFortLauderdaleRoute
   LocationsMiamiRoute: typeof LocationsMiamiRoute
   LocationsNaplesRoute: typeof LocationsNaplesRoute
@@ -407,12 +546,68 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/claims': {
+      id: '/claims'
+      path: '/claims'
+      fullPath: '/claims'
+      preLoaderRoute: typeof ClaimsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/fr': {
       id: '/fr'
       path: '/fr'
       fullPath: '/fr'
       preLoaderRoute: typeof FrRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
     }
     '/fr/about': {
       id: '/fr/about'
@@ -547,6 +742,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProfessionalServicesUmpireRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/category/$category': {
+      id: '/blog/category/$category'
+      path: '/category/$category'
+      fullPath: '/blog/category/$category'
+      preLoaderRoute: typeof BlogCategoryCategoryRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/page/2': {
+      id: '/blog/page/2'
+      path: '/page/2'
+      fullPath: '/blog/page/2'
+      preLoaderRoute: typeof BlogPage2RouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/page/3': {
+      id: '/blog/page/3'
+      path: '/page/3'
+      fullPath: '/blog/page/3'
+      preLoaderRoute: typeof BlogPage3RouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/fr/locations/': {
       id: '/fr/locations/'
       path: '/locations'
@@ -606,6 +822,22 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogCategoryCategoryRoute: typeof BlogCategoryCategoryRoute
+  BlogPage2Route: typeof BlogPage2Route
+  BlogPage3Route: typeof BlogPage3Route
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+  BlogCategoryCategoryRoute: BlogCategoryCategoryRoute,
+  BlogPage2Route: BlogPage2Route,
+  BlogPage3Route: BlogPage3Route,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
 interface FrRouteChildren {
   FrAboutRoute: typeof FrAboutRoute
   FrBlogRoute: typeof FrBlogRoute
@@ -646,7 +878,14 @@ const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BlogRoute: BlogRouteWithChildren,
+  ClaimsRoute: ClaimsRoute,
+  ContactRoute: ContactRoute,
   FrRoute: FrRouteWithChildren,
+  PrivacyRoute: PrivacyRoute,
+  ServicesRoute: ServicesRoute,
+  TermsRoute: TermsRoute,
   LocationsFortLauderdaleRoute: LocationsFortLauderdaleRoute,
   LocationsMiamiRoute: LocationsMiamiRoute,
   LocationsNaplesRoute: LocationsNaplesRoute,
