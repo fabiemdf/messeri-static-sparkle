@@ -229,12 +229,12 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://messeri-static-sparkle.lovable.app/#business",
+  "@id": "https://messeriassociates.com/#business",
   "name": "Messeri & Associates, LLC",
-  "image": "https://messeri-static-sparkle.lovable.app/img/logo.png",
-  "url": "https://messeri-static-sparkle.lovable.app/",
+  "image": "https://messeriassociates.com/img/logo.png",
+  "url": "https://messeriassociates.com/",
   "telephone": "+1-305-494-5820",
-  "email": "david@messeriadjusting.com",
+  "email": "david@messeriassociates.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "2660 NE 192nd Terr",
@@ -249,6 +249,7 @@
   "sameAs": ["https://www.linkedin.com/in/david-messeri-b72338169"],
   "hasCredential": [
     "Florida Licensed Public Insurance Adjuster #W602412",
+    "Florida Public Adjusting Firm License #G187726",
     "WIND Certified Appraiser"
   ]
 }
@@ -268,7 +269,8 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Policyholder Services</a></li>
+            <li><a href="/professional-services/appraisal">Professional Services</a></li>
             <li><a href="claims.html" class="active">Claims</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -290,8 +292,8 @@
   <section class="claims-page">
     <div class="container">
       <div class="section-header">
-        <h1>Submit Your Insurance Claim</h1>
-        <p>Start the process of getting the settlement you deserve</p>
+        <h1>Request a Free Claim Review</h1>
+        <p>Tell us the essentials first. If the matter may be a fit, we will follow up for documents and claim details securely.</p>
       </div>
       
       <!-- Claims Info Section -->
@@ -312,8 +314,8 @@
               <i class="fas fa-dollar-sign"></i>
             </div>
             <div class="info-content">
-              <h3>No Upfront Costs</h3>
-              <p>We only get paid when you receive your settlement from the insurance company.</p>
+              <h3>Written Engagement Terms</h3>
+              <p>Any applicable fee and engagement terms are explained in writing before an agreement is signed.</p>
             </div>
           </div>
           
@@ -336,7 +338,7 @@
             <form id="claimForm" action="/submit-claim" method="POST" enctype="multipart/form-data">
               <!-- Personal Information -->
               <div class="form-section">
-                <h3 class="form-section-title">Personal Information</h3>
+                <h3 class="form-section-title">Your Contact Information</h3>
                 
                 <div class="form-row">
                   <div class="form-group">
@@ -360,14 +362,14 @@
                   </div>
                 </div>
                 
-                <div class="form-row">
+                <div class="form-row intake-detail">
                   <div class="form-group">
-                    <label for="address" class="form-label">Property Address *</label>
-                    <input type="text" id="address" name="address" class="form-control" required>
+                    <label for="address" class="form-label">Property Address</label>
+                    <input type="text" id="address" name="address" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="city" class="form-label">City *</label>
-                    <input type="text" id="city" name="city" class="form-control" required>
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" id="city" name="city" class="form-control">
                   </div>
                 </div>
                 
@@ -377,32 +379,31 @@
                     <input type="text" id="zipCode" name="zipCode" class="form-control" required>
                   </div>
                   <div class="form-group">
-                    <label for="propertyType" class="form-label">Property Type *</label>
-                    <select id="propertyType" name="propertyType" class="form-control" required>
-                      <option value="">Select property type</option>
-                      <option value="residential">Residential - Single Family</option>
-                      <option value="condo">Residential - Condo/Townhouse</option>
-                      <option value="multi-family">Multi-Family Residence</option>
-                      <option value="commercial">Commercial Property</option>
-                      <option value="industrial">Industrial Property</option>
-                      <option value="other">Other</option>
+                    <label for="claimStatus" class="form-label">Current Claim Status *</label>
+                    <select id="claimStatus" name="claimStatus" class="form-control" required>
+                      <option value="">Select claim status</option>
+                      <option value="not-filed">Not yet filed</option>
+                      <option value="pending">Filed and pending</option>
+                      <option value="underpaid">Underpaid</option>
+                      <option value="denied">Denied</option>
+                      <option value="appraisal">In appraisal</option>
                     </select>
                   </div>
                 </div>
               </div>
               
               <!-- Insurance Information -->
-              <div class="form-section">
+              <div class="form-section intake-detail">
                 <h3 class="form-section-title">Insurance Information</h3>
                 
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="insuranceCompany" class="form-label">Insurance Company *</label>
-                    <input type="text" id="insuranceCompany" name="insuranceCompany" class="form-control" required>
+                    <label for="insuranceCompany" class="form-label">Insurance Company</label>
+                    <input type="text" id="insuranceCompany" name="insuranceCompany" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="policyNumber" class="form-label">Policy Number *</label>
-                    <input type="text" id="policyNumber" name="policyNumber" class="form-control" required>
+                    <label for="policyNumber" class="form-label">Policy Number</label>
+                    <input type="text" id="policyNumber" name="policyNumber" class="form-control">
                   </div>
                 </div>
                 
@@ -443,18 +444,18 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="dateOfLoss" class="form-label">Date of Loss *</label>
-                    <input type="date" id="dateOfLoss" name="dateOfLoss" class="form-control" required>
+                    <label for="dateOfLoss" class="form-label">Date of Loss (if known)</label>
+                    <input type="date" id="dateOfLoss" name="dateOfLoss" class="form-control">
                   </div>
                 </div>
                 
                 <div class="form-group">
-                  <label for="damageDescription" class="form-label">Description of Damage *</label>
+                  <label for="damageDescription" class="form-label">Brief Description *</label>
                   <textarea id="damageDescription" name="damageDescription" class="form-control" required></textarea>
-                  <p class="form-note">Please provide a detailed description of the damage to your property.</p>
+                  <p class="form-note">A short summary is enough for this first step.</p>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group intake-detail">
                   <label class="form-label">Has the insurance company already inspected the property?</label>
                   <div class="form-check">
                     <input type="radio" id="inspectionYes" name="inspectionDone" value="yes" class="form-check-input">
@@ -466,14 +467,14 @@
                   </div>
                 </div>
                 
-                <div id="inspectionDateGroup" class="form-group" style="display: none;">
+                <div id="inspectionDateGroup" class="form-group intake-detail" style="display: none;">
                   <label for="inspectionDate" class="form-label">Date of Inspection</label>
                   <input type="date" id="inspectionDate" name="inspectionDate" class="form-control">
                 </div>
               </div>
               
               <!-- Documentation -->
-              <div class="form-section">
+              <div class="form-section intake-detail">
                 <h3 class="form-section-title">Documentation</h3>
                 
                 <div class="form-group">
@@ -504,7 +505,7 @@
               </div>
               
               <!-- Additional Information -->
-              <div class="form-section">
+              <div class="form-section intake-detail">
                 <h3 class="form-section-title">Additional Information</h3>
                 
                 <div class="form-group">
@@ -544,7 +545,8 @@
                 </div>
                 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Submit Claim</button>
+                  <p class="form-note intake-follow-up"><i class="fas fa-lock"></i> Please do not send policy numbers or sensitive documents in this first step. We will provide follow-up instructions if additional records are needed.</p>
+                  <button type="submit" class="btn btn-primary">Request My Claim Review</button>
                 </div>
               </div>
             </form>
@@ -605,11 +607,11 @@
             </div>
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <a href="mailto:david@messeriadjusting.com">david@messeriadjusting.com</a>
+              <a href="mailto:david@messeriassociates.com">david@messeriassociates.com</a>
             </div>
             <div class="contact-item license">
               <i class="fas fa-id-card"></i>
-              <span>Licensed Public Insurance Adjuster. License #W602412<br>WIND Certified Appraiser</span>
+              <span>David Messeri — Florida Public Adjuster #W602412<br>Messeri &amp; Associates, LLC — Firm License #G187726<br>WIND Certified Appraiser</span>
             </div>
           </div>
           <div class="social-links">
@@ -621,7 +623,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Messeri & Associates, LLC. All rights reserved.</p>
+        <p>&copy; 2026 Messeri & Associates, LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>

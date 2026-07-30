@@ -171,12 +171,12 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://messeri-static-sparkle.lovable.app/#business",
+  "@id": "https://messeriassociates.com/#business",
   "name": "Messeri & Associates, LLC",
-  "image": "https://messeri-static-sparkle.lovable.app/img/logo.png",
-  "url": "https://messeri-static-sparkle.lovable.app/",
+  "image": "https://messeriassociates.com/img/logo.png",
+  "url": "https://messeriassociates.com/",
   "telephone": "+1-305-494-5820",
-  "email": "david@messeriadjusting.com",
+  "email": "david@messeriassociates.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "2660 NE 192nd Terr",
@@ -191,6 +191,7 @@
   "sameAs": ["https://www.linkedin.com/in/david-messeri-b72338169"],
   "hasCredential": [
     "Florida Licensed Public Insurance Adjuster #W602412",
+    "Florida Public Adjusting Firm License #G187726",
     "WIND Certified Appraiser"
   ]
 }
@@ -210,7 +211,8 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Policyholder Services</a></li>
+            <li><a href="/professional-services/appraisal">Professional Services</a></li>
             <li><a href="claims.html">Claims</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
@@ -266,7 +268,7 @@
             </div>
             <div class="contact-text">
               <h4>Email</h4>
-              <p>david@messeriadjusting.com</p>
+              <p>david@messeriassociates.com</p>
             </div>
           </div>
           
@@ -280,7 +282,7 @@
                 Monday - Thursday: 9:00 AM - 5:00 PM<br>
                 Friday: 9:00 AM - 2:00 PM<br>
                 Sunday: By Appointment Only<br>
-                Other Hours Emergency Support Available
+                Property emergency? Call or text at any time. Messages outside regular hours are returned as promptly as possible.
               </p>
             </div>
           </div>
@@ -312,8 +314,15 @@
             </div>
             
             <div class="form-group">
-              <label for="subject" class="form-label">Subject *</label>
-              <input type="text" id="subject" name="subject" class="form-control" required>
+              <label for="inquiryType" class="form-label">How Can We Help? *</label>
+              <select id="inquiryType" name="inquiryType" class="form-control" required>
+                <option value="">Select a service</option>
+                <option value="public-adjusting">Policyholder / Public Adjusting</option>
+                <option value="appraisal">Insured-Side Appraisal</option>
+                <option value="umpire">Neutral Umpire Assignment</option>
+                <option value="expert-witness">Expert Witness / Consulting</option>
+                <option value="other">Other</option>
+              </select>
             </div>
             
             <div class="form-group">
@@ -350,8 +359,8 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-content">
-        <h2>Need immediate assistance?</h2>
-        <p>Call us now at (305) 494-5820 for 24/7 emergency support.</p>
+        <h2>Property emergency?</h2>
+        <p>Call or text (305) 494-5820. Messages outside regular business hours are returned as promptly as possible.</p>
         <a href="tel:3054945820" class="btn btn-secondary">Call Now</a>
       </div>
     </div>
@@ -365,7 +374,7 @@
           <div class="footer-logo">
             <img src="img/logo.png" alt="Messeri & Associates, LLC">
           </div>
-          <p>Dedicated to maximizing every legitimate dollar under your insurance policy with strategic advocacy and meticulous attention to detail.</p>
+          <p>Policyholder representation and professional property-claim services led personally by David Messeri.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
@@ -397,11 +406,11 @@
             </div>
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <a href="mailto:david@messeriadjusting.com">david@messeriadjusting.com</a>
+              <a href="mailto:david@messeriassociates.com">david@messeriassociates.com</a>
             </div>
             <div class="contact-item license">
               <i class="fas fa-id-card"></i>
-              <span>Licensed Public Insurance Adjuster. License #W602412<br>WIND Certified Appraiser</span>
+              <span>David Messeri — Florida Public Adjuster #W602412<br>Messeri &amp; Associates, LLC — Firm License #G187726<br>WIND Certified Appraiser</span>
             </div>
           </div>
           <div class="social-links">
@@ -413,7 +422,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Messeri & Associates, LLC. All rights reserved.</p>
+        <p>&copy; 2026 Messeri & Associates, LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>
