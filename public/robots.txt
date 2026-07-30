@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /submit-claim
+Disallow: /submit-contact
+Disallow: /submit-testimonial
+
+Sitemap: https://messeriassociates.com/sitemap.xml
