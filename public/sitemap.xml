@@ -73,10 +73,30 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://messeriassociates.com/fr/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://messeriassociates.com/contact"/>
   </url>
-  <url><loc>https://messeriassociates.com/privacy</loc></url>
-  <url><loc>https://messeriassociates.com/fr/privacy</loc></url>
-  <url><loc>https://messeriassociates.com/terms</loc></url>
-  <url><loc>https://messeriassociates.com/fr/terms</loc></url>
+  <url>
+    <loc>https://messeriassociates.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://messeriassociates.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://messeriassociates.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://messeriassociates.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://messeriassociates.com/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://messeriassociates.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://messeriassociates.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://messeriassociates.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://messeriassociates.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://messeriassociates.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://messeriassociates.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://messeriassociates.com/terms"/>
+  </url>
+  <url>
+    <loc>https://messeriassociates.com/fr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://messeriassociates.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://messeriassociates.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://messeriassociates.com/fr/terms"/>
+  </url>
   <url><loc>https://messeriassociates.com/professional-services/appraisal</loc></url>
   <url><loc>https://messeriassociates.com/professional-services/umpire</loc></url>
   <url><loc>https://messeriassociates.com/professional-services/expert-witness</loc></url>
