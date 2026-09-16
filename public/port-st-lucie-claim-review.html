@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NZL35G7B");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Port St. Lucie Property Damage Claim Review | Messeri &amp; Associates</title>
+    <meta
+      name="description"
+      content="Port St. Lucie property owners: request a free initial review for tornado, wind, water, fire, roof leak, or other property damage claims."
+    />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="canonical" href="https://messeriassociates.com/port-st-lucie-claim-review" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/psl-landing.css" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NZL35G7B"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Messeri & Associates home">
+          <img src="/img/logo2.png" alt="Messeri & Associates, LLC" />
+        </a>
+        <a
+          class="header-call"
+          href="tel:+13054945820"
+          data-track="phone"
+          data-location="header"
+          aria-label="Call Messeri and Associates at 305-494-5820"
+        >
+          <span>Speak directly with our team</span>
+          <span class="phone-icon" aria-hidden="true">☎</span>
+          (305) 494-5820
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Port St. Lucie Property Owners</p>
+            <h1>Has Your Property Suffered Damage?</h1>
+            <p class="hero-lead">
+              If your home or insured property was damaged, Messeri &amp; Associates can help you
+              understand the claim process and what to do next.
+            </p>
+            <div class="damage-tags" aria-label="Types of property damage">
+              <span>Tornado</span>
+              <span>Wind</span>
+              <span>Water</span>
+              <span>Fire</span>
+              <span>Roof Leak</span>
+              <span>Other Damage</span>
+            </div>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="#claim-review"
+                data-track="form-cta"
+                data-location="hero"
+                >Request a Free Claim Review</a
+              >
+              <a
+                class="button button-secondary"
+                href="tel:+13054945820"
+                data-track="phone"
+                data-location="hero"
+                >Call (305) 494-5820</a
+              >
+            </div>
+            <p class="hero-note">
+              No obligation. A consultation does not create a client relationship.
+            </p>
+          </div>
+
+          <div class="lead-card" id="claim-review">
+            <h2>Tell Us About the Damage</h2>
+            <p>
+              Complete this short form, and our team will contact you to discuss your situation.
+            </p>
+            <form id="pslLeadForm" action="/api/psl-lead" method="post">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="firstName">First name *</label>
+                  <input id="firstName" name="firstName" autocomplete="given-name" required />
+                </div>
+                <div class="field">
+                  <label for="lastName">Last name *</label>
+                  <input id="lastName" name="lastName" autocomplete="family-name" required />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone number *</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" />
+                </div>
+                <div class="field">
+                  <label for="zipCode">Property ZIP code *</label>
+                  <input
+                    id="zipCode"
+                    name="zipCode"
+                    inputmode="numeric"
+                    autocomplete="postal-code"
+                    pattern="[0-9]{5}(-[0-9]{4})?"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="damageType">Type of damage *</label>
+                  <select id="damageType" name="damageType" required>
+                    <option value="">Select one</option>
+                    <option value="Tornado">Tornado</option>
+                    <option value="Wind or storm">Wind or storm</option>
+                    <option value="Water or plumbing">Water or plumbing</option>
+                    <option value="Fire or smoke">Fire or smoke</option>
+                    <option value="Roof leak">Roof leak</option>
+                    <option value="Other property damage">Other property damage</option>
+                  </select>
+                </div>
+                <div class="field field-full">
+                  <label for="claimStatus">Where are you in the claim process?</label>
+                  <select id="claimStatus" name="claimStatus">
+                    <option value="">Select one</option>
+                    <option value="Not filed">I have not filed a claim</option>
+                    <option value="Filed and pending">My claim is pending</option>
+                    <option value="Payment received">I received a payment</option>
+                    <option value="Denied">My claim was denied</option>
+                    <option value="Not sure">I am not sure</option>
+                  </select>
+                </div>
+                <div class="field field-full">
+                  <label for="message">What happened? <span>(optional)</span></label>
+                  <textarea id="message" name="message"></textarea>
+                </div>
+              </div>
+
+              <div class="honeypot" aria-hidden="true">
+                <label for="company">Company</label>
+                <input id="company" name="company" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <input type="hidden" name="utmSource" />
+              <input type="hidden" name="utmMedium" />
+              <input type="hidden" name="utmCampaign" />
+              <input type="hidden" name="utmContent" />
+              <input type="hidden" name="landingPage" />
+
+              <label class="consent" for="contactConsent">
+                <input id="contactConsent" name="contactConsent" type="checkbox" required />
+                <span>
+                  I agree that Messeri &amp; Associates may contact me about this request. I have
+                  read the <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and
+                  <a href="/terms" target="_blank" rel="noopener">Terms</a>.
+                </span>
+              </label>
+
+              <button id="submitButton" class="button button-primary button-wide" type="submit">
+                Request My Free Claim Review
+              </button>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+              <p class="privacy-note">
+                Please do not include policy numbers or sensitive documents.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Messeri credentials">
+        <div class="container trust-grid">
+          <div class="trust-item">
+            <strong>Florida Licensed</strong>
+            <span>Public adjusting firm</span>
+          </div>
+          <div class="trust-item">
+            <strong>Policyholder Focused</strong>
+            <span>We represent you—not the insurance company</span>
+          </div>
+          <div class="trust-item">
+            <strong>Free Initial Review</strong>
+            <span>Talk with our team about your situation</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Property Damage Comes in Many Forms</p>
+            <h2>Not All Damage Is Easy to See</h2>
+            <p>
+              A quick look from the ground may not tell the whole story. If something does not look
+              or feel right after a loss, it may be worth having the situation reviewed.
+            </p>
+          </div>
+          <div class="damage-grid">
+            <article class="damage-card">
+              <span class="number">01</span>
+              <h3>Tornado &amp; Wind</h3>
+              <p>Roof, fence, screen enclosure, awning, exterior, and impact damage.</p>
+            </article>
+            <article class="damage-card">
+              <span class="number">02</span>
+              <h3>Water &amp; Plumbing</h3>
+              <p>Leaks, burst lines, appliance failures, and resulting interior damage.</p>
+            </article>
+            <article class="damage-card">
+              <span class="number">03</span>
+              <h3>Fire &amp; Smoke</h3>
+              <p>Damage from flames, smoke, soot, and water used to extinguish a fire.</p>
+            </article>
+            <article class="damage-card">
+              <span class="number">04</span>
+              <h3>Roof Leaks</h3>
+              <p>Roof and ceiling damage, staining, moisture, and related repairs.</p>
+            </article>
+            <article class="damage-card">
+              <span class="number">05</span>
+              <h3>Denied or Underpaid</h3>
+              <p>Claims that were denied, delayed, or paid below the documented loss.</p>
+            </article>
+            <article class="damage-card">
+              <span class="number">06</span>
+              <h3>Other Property Damage</h3>
+              <p>Other sudden losses that may be covered under a property insurance policy.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container content-grid">
+          <div class="content-copy">
+            <p class="eyebrow">We Work for Policyholders</p>
+            <h2>You Do Not Have to Navigate the Claim Alone</h2>
+            <p>
+              Messeri &amp; Associates is a Florida licensed public adjusting firm. We help
+              policyholders understand, document, and present covered property damage claims.
+            </p>
+            <ul class="check-list">
+              <li>Understand the next step in your claim</li>
+              <li>Identify damage that may need closer review</li>
+              <li>Organize documentation and claim information</li>
+              <li>Address delayed, denied, or underpaid claims</li>
+            </ul>
+            <a
+              class="button button-primary"
+              href="#claim-review"
+              data-track="form-cta"
+              data-location="about"
+              >Request a Free Claim Review</a
+            >
+          </div>
+          <aside class="profile-card">
+            <img src="/img/profile.jpeg" alt="David Messeri, President and Principal Adjuster" />
+            <div class="profile-copy">
+              <h3>David Messeri</h3>
+              <p>President and Principal Adjuster · Florida Public Adjuster #W602412</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section final-cta">
+        <div class="container final-inner">
+          <div>
+            <p class="eyebrow">Start With a Conversation</p>
+            <h2>Let’s Talk About Your Property Damage</h2>
+            <p>Call now or send the short form above. There is no obligation.</p>
+          </div>
+          <div class="final-actions">
+            <a
+              class="button button-primary"
+              href="tel:+13054945820"
+              data-track="phone"
+              data-location="final_cta"
+              >Call (305) 494-5820</a
+            >
+            <a
+              class="button button-secondary"
+              href="#claim-review"
+              data-track="form-cta"
+              data-location="final_cta"
+              >Request a Review</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="disclosure" aria-label="Solicitation disclosure">
+        <div class="container">
+          <p>
+            This is a solicitation for business. If you have had a claim for an insured property
+            loss or damage and you are satisfied with the payment by your insurer, you may disregard
+            this advertisement.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 Messeri &amp; Associates, LLC. All rights reserved.</p>
+        <p class="footer-licenses">
+          Florida Public Adjusting Firm #G187726<br />
+          David Messeri, President and Principal Adjuster #W602412
+        </p>
+      </div>
+    </footer>
+
+    <nav class="mobile-bar" aria-label="Quick actions">
+      <a href="tel:+13054945820" data-track="phone" data-location="mobile_bar">Call Now</a>
+      <a href="#claim-review" data-track="form-cta" data-location="mobile_bar">Free Review</a>
+    </nav>
+
+    <script src="/psl-landing.js" defer></script>
+  </body>
+</html>
