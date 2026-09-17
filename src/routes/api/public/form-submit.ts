@@ -72,10 +72,13 @@ export const Route = createFileRoute("/api/public/form-submit")({
           entries = Object.entries(raw)
             .filter(([key]) => !key.startsWith("__"))
             .slice(0, MAX_FIELDS)
-            .map(([key, value]) => [
-              key,
-              String(value ?? "").slice(0, MAX_FIELD_LENGTH).trim(),
-            ])
+            .map(
+              ([key, value]) =>
+                [
+                  key,
+                  String(value ?? "").slice(0, MAX_FIELD_LENGTH).trim(),
+                ] as [string, string],
+            )
             .filter(([, value]) => value.length > 0);
         } catch (error) {
           console.error("Failed to parse submission", error);
