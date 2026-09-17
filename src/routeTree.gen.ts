@@ -49,6 +49,7 @@ import { Route as FrLocationsFortLauderdaleRouteImport } from './routes/fr.locat
 import { Route as BlogPage3RouteImport } from './routes/blog.page.3'
 import { Route as BlogPage2RouteImport } from './routes/blog.page.2'
 import { Route as BlogCategoryCategoryRouteImport } from './routes/blog.category.$category'
+import { Route as ApiPublicFormSubmitRouteImport } from './routes/api/public/form-submit'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -256,6 +257,11 @@ const BlogCategoryCategoryRoute = BlogCategoryCategoryRouteImport.update({
   path: '/category/$category',
   getParentRoute: () => BlogRoute,
 } as any)
+const ApiPublicFormSubmitRoute = ApiPublicFormSubmitRouteImport.update({
+  id: '/api/public/form-submit',
+  path: '/api/public/form-submit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -287,6 +293,7 @@ export interface FileRoutesByFullPath {
   '/professional-services/umpire': typeof ProfessionalServicesUmpireRoute
   '/locations/': typeof LocationsIndexRoute
   '/professional-services/': typeof ProfessionalServicesIndexRoute
+  '/api/public/form-submit': typeof ApiPublicFormSubmitRoute
   '/blog/category/$category': typeof BlogCategoryCategoryRoute
   '/blog/page/2': typeof BlogPage2Route
   '/blog/page/3': typeof BlogPage3Route
@@ -329,6 +336,7 @@ export interface FileRoutesByTo {
   '/professional-services/umpire': typeof ProfessionalServicesUmpireRoute
   '/locations': typeof LocationsIndexRoute
   '/professional-services': typeof ProfessionalServicesIndexRoute
+  '/api/public/form-submit': typeof ApiPublicFormSubmitRoute
   '/blog/category/$category': typeof BlogCategoryCategoryRoute
   '/blog/page/2': typeof BlogPage2Route
   '/blog/page/3': typeof BlogPage3Route
@@ -372,6 +380,7 @@ export interface FileRoutesById {
   '/professional-services/umpire': typeof ProfessionalServicesUmpireRoute
   '/locations/': typeof LocationsIndexRoute
   '/professional-services/': typeof ProfessionalServicesIndexRoute
+  '/api/public/form-submit': typeof ApiPublicFormSubmitRoute
   '/blog/category/$category': typeof BlogCategoryCategoryRoute
   '/blog/page/2': typeof BlogPage2Route
   '/blog/page/3': typeof BlogPage3Route
@@ -416,6 +425,7 @@ export interface FileRouteTypes {
     | '/professional-services/umpire'
     | '/locations/'
     | '/professional-services/'
+    | '/api/public/form-submit'
     | '/blog/category/$category'
     | '/blog/page/2'
     | '/blog/page/3'
@@ -458,6 +468,7 @@ export interface FileRouteTypes {
     | '/professional-services/umpire'
     | '/locations'
     | '/professional-services'
+    | '/api/public/form-submit'
     | '/blog/category/$category'
     | '/blog/page/2'
     | '/blog/page/3'
@@ -500,6 +511,7 @@ export interface FileRouteTypes {
     | '/professional-services/umpire'
     | '/locations/'
     | '/professional-services/'
+    | '/api/public/form-submit'
     | '/blog/category/$category'
     | '/blog/page/2'
     | '/blog/page/3'
@@ -535,6 +547,7 @@ export interface RootRouteChildren {
   ProfessionalServicesUmpireRoute: typeof ProfessionalServicesUmpireRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
   ProfessionalServicesIndexRoute: typeof ProfessionalServicesIndexRoute
+  ApiPublicFormSubmitRoute: typeof ApiPublicFormSubmitRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -819,6 +832,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogCategoryCategoryRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/api/public/form-submit': {
+      id: '/api/public/form-submit'
+      path: '/api/public/form-submit'
+      fullPath: '/api/public/form-submit'
+      preLoaderRoute: typeof ApiPublicFormSubmitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -899,6 +919,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProfessionalServicesUmpireRoute: ProfessionalServicesUmpireRoute,
   LocationsIndexRoute: LocationsIndexRoute,
   ProfessionalServicesIndexRoute: ProfessionalServicesIndexRoute,
+  ApiPublicFormSubmitRoute: ApiPublicFormSubmitRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
