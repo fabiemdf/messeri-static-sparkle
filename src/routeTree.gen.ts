@@ -9,81 +9,54 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermsRouteImport } from './routes/terms'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as FrRouteImport } from './routes/fr'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as ClaimsRouteImport } from './routes/claims'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProfessionalServicesIndexRouteImport } from './routes/professional-services.index'
-import { Route as LocationsIndexRouteImport } from './routes/locations.index'
-import { Route as ProfessionalServicesUmpireRouteImport } from './routes/professional-services.umpire'
-import { Route as ProfessionalServicesExpertWitnessRouteImport } from './routes/professional-services.expert-witness'
-import { Route as ProfessionalServicesAppraisalRouteImport } from './routes/professional-services.appraisal'
-import { Route as LocationsWestPalmBeachRouteImport } from './routes/locations.west-palm-beach'
-import { Route as LocationsTampaRouteImport } from './routes/locations.tampa'
-import { Route as LocationsPensacolaRouteImport } from './routes/locations.pensacola'
-import { Route as LocationsOrlandoRouteImport } from './routes/locations.orlando'
-import { Route as LocationsNaplesRouteImport } from './routes/locations.naples'
-import { Route as LocationsMiamiRouteImport } from './routes/locations.miami'
-import { Route as LocationsFortLauderdaleRouteImport } from './routes/locations.fort-lauderdale'
-import { Route as FrTermsRouteImport } from './routes/fr.terms'
-import { Route as FrServicesRouteImport } from './routes/fr.services'
-import { Route as FrPrivacyRouteImport } from './routes/fr.privacy'
-import { Route as FrContactRouteImport } from './routes/fr.contact'
-import { Route as FrClaimsRouteImport } from './routes/fr.claims'
-import { Route as FrBlogRouteImport } from './routes/fr.blog'
-import { Route as FrAboutRouteImport } from './routes/fr.about'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ClaimsRouteImport } from './routes/claims'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FrRouteImport } from './routes/fr'
+import { Route as PortStLucieClaimReviewRouteImport } from './routes/port-st-lucie-claim-review'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PslRouteImport } from './routes/psl'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ApiPslLeadRouteImport } from './routes/api.psl-lead'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as FrLocationsIndexRouteImport } from './routes/fr.locations.index'
-import { Route as FrLocationsWestPalmBeachRouteImport } from './routes/fr.locations.west-palm-beach'
-import { Route as FrLocationsTampaRouteImport } from './routes/fr.locations.tampa'
-import { Route as FrLocationsPensacolaRouteImport } from './routes/fr.locations.pensacola'
-import { Route as FrLocationsOrlandoRouteImport } from './routes/fr.locations.orlando'
-import { Route as FrLocationsNaplesRouteImport } from './routes/fr.locations.naples'
-import { Route as FrLocationsMiamiRouteImport } from './routes/fr.locations.miami'
-import { Route as FrLocationsFortLauderdaleRouteImport } from './routes/fr.locations.fort-lauderdale'
-import { Route as BlogPage3RouteImport } from './routes/blog.page.3'
-import { Route as BlogPage2RouteImport } from './routes/blog.page.2'
-import { Route as BlogCategoryCategoryRouteImport } from './routes/blog.category.$category'
+import { Route as FrAboutRouteImport } from './routes/fr.about'
+import { Route as FrBlogRouteImport } from './routes/fr.blog'
+import { Route as FrClaimsRouteImport } from './routes/fr.claims'
+import { Route as FrContactRouteImport } from './routes/fr.contact'
+import { Route as FrPrivacyRouteImport } from './routes/fr.privacy'
+import { Route as FrServicesRouteImport } from './routes/fr.services'
+import { Route as FrTermsRouteImport } from './routes/fr.terms'
+import { Route as LocationsIndexRouteImport } from './routes/locations.index'
+import { Route as LocationsFortLauderdaleRouteImport } from './routes/locations.fort-lauderdale'
+import { Route as LocationsMiamiRouteImport } from './routes/locations.miami'
+import { Route as LocationsNaplesRouteImport } from './routes/locations.naples'
+import { Route as LocationsOrlandoRouteImport } from './routes/locations.orlando'
+import { Route as LocationsPensacolaRouteImport } from './routes/locations.pensacola'
+import { Route as LocationsTampaRouteImport } from './routes/locations.tampa'
+import { Route as LocationsWestPalmBeachRouteImport } from './routes/locations.west-palm-beach'
+import { Route as ProfessionalServicesIndexRouteImport } from './routes/professional-services.index'
+import { Route as ProfessionalServicesAppraisalRouteImport } from './routes/professional-services.appraisal'
+import { Route as ProfessionalServicesExpertWitnessRouteImport } from './routes/professional-services.expert-witness'
+import { Route as ProfessionalServicesUmpireRouteImport } from './routes/professional-services.umpire'
 import { Route as ApiPublicFormSubmitRouteImport } from './routes/api/public/form-submit'
+import { Route as BlogCategoryCategoryRouteImport } from './routes/blog.category.$category'
+import { Route as BlogPage2RouteImport } from './routes/blog.page.2'
+import { Route as BlogPage3RouteImport } from './routes/blog.page.3'
+import { Route as FrLocationsIndexRouteImport } from './routes/fr.locations.index'
+import { Route as FrLocationsFortLauderdaleRouteImport } from './routes/fr.locations.fort-lauderdale'
+import { Route as FrLocationsMiamiRouteImport } from './routes/fr.locations.miami'
+import { Route as FrLocationsNaplesRouteImport } from './routes/fr.locations.naples'
+import { Route as FrLocationsOrlandoRouteImport } from './routes/fr.locations.orlando'
+import { Route as FrLocationsPensacolaRouteImport } from './routes/fr.locations.pensacola'
+import { Route as FrLocationsTampaRouteImport } from './routes/fr.locations.tampa'
+import { Route as FrLocationsWestPalmBeachRouteImport } from './routes/fr.locations.west-palm-beach'
 
-const TermsRoute = TermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FrRoute = FrRouteImport.update({
-  id: '/fr',
-  path: '/fr',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ClaimsRoute = ClaimsRouteImport.update({
-  id: '/claims',
-  path: '/claims',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -91,9 +64,134 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClaimsRoute = ClaimsRouteImport.update({
+  id: '/claims',
+  path: '/claims',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrRoute = FrRouteImport.update({
+  id: '/fr',
+  path: '/fr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortStLucieClaimReviewRoute = PortStLucieClaimReviewRouteImport.update({
+  id: '/port-st-lucie-claim-review',
+  path: '/port-st-lucie-claim-review',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PslRoute = PslRouteImport.update({
+  id: '/psl',
+  path: '/psl',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPslLeadRoute = ApiPslLeadRouteImport.update({
+  id: '/api/psl-lead',
+  path: '/api/psl-lead',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
+const FrAboutRoute = FrAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBlogRoute = FrBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrClaimsRoute = FrClaimsRouteImport.update({
+  id: '/claims',
+  path: '/claims',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrContactRoute = FrContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrPrivacyRoute = FrPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrServicesRoute = FrServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrTermsRoute = FrTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => FrRoute,
+} as any)
+const LocationsIndexRoute = LocationsIndexRouteImport.update({
+  id: '/locations/',
+  path: '/locations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsFortLauderdaleRoute = LocationsFortLauderdaleRouteImport.update({
+  id: '/locations/fort-lauderdale',
+  path: '/locations/fort-lauderdale',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsMiamiRoute = LocationsMiamiRouteImport.update({
+  id: '/locations/miami',
+  path: '/locations/miami',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsNaplesRoute = LocationsNaplesRouteImport.update({
+  id: '/locations/naples',
+  path: '/locations/naples',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsOrlandoRoute = LocationsOrlandoRouteImport.update({
+  id: '/locations/orlando',
+  path: '/locations/orlando',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsPensacolaRoute = LocationsPensacolaRouteImport.update({
+  id: '/locations/pensacola',
+  path: '/locations/pensacola',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsTampaRoute = LocationsTampaRouteImport.update({
+  id: '/locations/tampa',
+  path: '/locations/tampa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsWestPalmBeachRoute = LocationsWestPalmBeachRouteImport.update({
+  id: '/locations/west-palm-beach',
+  path: '/locations/west-palm-beach',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProfessionalServicesIndexRoute =
@@ -102,15 +200,10 @@ const ProfessionalServicesIndexRoute =
     path: '/professional-services/',
     getParentRoute: () => rootRouteImport,
   } as any)
-const LocationsIndexRoute = LocationsIndexRouteImport.update({
-  id: '/locations/',
-  path: '/locations/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProfessionalServicesUmpireRoute =
-  ProfessionalServicesUmpireRouteImport.update({
-    id: '/professional-services/umpire',
-    path: '/professional-services/umpire',
+const ProfessionalServicesAppraisalRoute =
+  ProfessionalServicesAppraisalRouteImport.update({
+    id: '/professional-services/appraisal',
+    path: '/professional-services/appraisal',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ProfessionalServicesExpertWitnessRoute =
@@ -119,121 +212,35 @@ const ProfessionalServicesExpertWitnessRoute =
     path: '/professional-services/expert-witness',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ProfessionalServicesAppraisalRoute =
-  ProfessionalServicesAppraisalRouteImport.update({
-    id: '/professional-services/appraisal',
-    path: '/professional-services/appraisal',
+const ProfessionalServicesUmpireRoute =
+  ProfessionalServicesUmpireRouteImport.update({
+    id: '/professional-services/umpire',
+    path: '/professional-services/umpire',
     getParentRoute: () => rootRouteImport,
   } as any)
-const LocationsWestPalmBeachRoute = LocationsWestPalmBeachRouteImport.update({
-  id: '/locations/west-palm-beach',
-  path: '/locations/west-palm-beach',
+const ApiPublicFormSubmitRoute = ApiPublicFormSubmitRouteImport.update({
+  id: '/api/public/form-submit',
+  path: '/api/public/form-submit',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LocationsTampaRoute = LocationsTampaRouteImport.update({
-  id: '/locations/tampa',
-  path: '/locations/tampa',
-  getParentRoute: () => rootRouteImport,
+const BlogCategoryCategoryRoute = BlogCategoryCategoryRouteImport.update({
+  id: '/category/$category',
+  path: '/category/$category',
+  getParentRoute: () => BlogRoute,
 } as any)
-const LocationsPensacolaRoute = LocationsPensacolaRouteImport.update({
-  id: '/locations/pensacola',
-  path: '/locations/pensacola',
-  getParentRoute: () => rootRouteImport,
+const BlogPage2Route = BlogPage2RouteImport.update({
+  id: '/page/2',
+  path: '/page/2',
+  getParentRoute: () => BlogRoute,
 } as any)
-const LocationsOrlandoRoute = LocationsOrlandoRouteImport.update({
-  id: '/locations/orlando',
-  path: '/locations/orlando',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LocationsNaplesRoute = LocationsNaplesRouteImport.update({
-  id: '/locations/naples',
-  path: '/locations/naples',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LocationsMiamiRoute = LocationsMiamiRouteImport.update({
-  id: '/locations/miami',
-  path: '/locations/miami',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LocationsFortLauderdaleRoute = LocationsFortLauderdaleRouteImport.update({
-  id: '/locations/fort-lauderdale',
-  path: '/locations/fort-lauderdale',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FrTermsRoute = FrTermsRouteImport.update({
-  id: '/terms',
-  path: '/terms',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrServicesRoute = FrServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrPrivacyRoute = FrPrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrContactRoute = FrContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrClaimsRoute = FrClaimsRouteImport.update({
-  id: '/claims',
-  path: '/claims',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrBlogRoute = FrBlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrAboutRoute = FrAboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => FrRoute,
-} as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
+const BlogPage3Route = BlogPage3RouteImport.update({
+  id: '/page/3',
+  path: '/page/3',
   getParentRoute: () => BlogRoute,
 } as any)
 const FrLocationsIndexRoute = FrLocationsIndexRouteImport.update({
   id: '/locations/',
   path: '/locations/',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrLocationsWestPalmBeachRoute =
-  FrLocationsWestPalmBeachRouteImport.update({
-    id: '/locations/west-palm-beach',
-    path: '/locations/west-palm-beach',
-    getParentRoute: () => FrRoute,
-  } as any)
-const FrLocationsTampaRoute = FrLocationsTampaRouteImport.update({
-  id: '/locations/tampa',
-  path: '/locations/tampa',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrLocationsPensacolaRoute = FrLocationsPensacolaRouteImport.update({
-  id: '/locations/pensacola',
-  path: '/locations/pensacola',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrLocationsOrlandoRoute = FrLocationsOrlandoRouteImport.update({
-  id: '/locations/orlando',
-  path: '/locations/orlando',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrLocationsNaplesRoute = FrLocationsNaplesRouteImport.update({
-  id: '/locations/naples',
-  path: '/locations/naples',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrLocationsMiamiRoute = FrLocationsMiamiRouteImport.update({
-  id: '/locations/miami',
-  path: '/locations/miami',
   getParentRoute: () => FrRoute,
 } as any)
 const FrLocationsFortLauderdaleRoute =
@@ -242,26 +249,37 @@ const FrLocationsFortLauderdaleRoute =
     path: '/locations/fort-lauderdale',
     getParentRoute: () => FrRoute,
   } as any)
-const BlogPage3Route = BlogPage3RouteImport.update({
-  id: '/page/3',
-  path: '/page/3',
-  getParentRoute: () => BlogRoute,
+const FrLocationsMiamiRoute = FrLocationsMiamiRouteImport.update({
+  id: '/locations/miami',
+  path: '/locations/miami',
+  getParentRoute: () => FrRoute,
 } as any)
-const BlogPage2Route = BlogPage2RouteImport.update({
-  id: '/page/2',
-  path: '/page/2',
-  getParentRoute: () => BlogRoute,
+const FrLocationsNaplesRoute = FrLocationsNaplesRouteImport.update({
+  id: '/locations/naples',
+  path: '/locations/naples',
+  getParentRoute: () => FrRoute,
 } as any)
-const BlogCategoryCategoryRoute = BlogCategoryCategoryRouteImport.update({
-  id: '/category/$category',
-  path: '/category/$category',
-  getParentRoute: () => BlogRoute,
+const FrLocationsOrlandoRoute = FrLocationsOrlandoRouteImport.update({
+  id: '/locations/orlando',
+  path: '/locations/orlando',
+  getParentRoute: () => FrRoute,
 } as any)
-const ApiPublicFormSubmitRoute = ApiPublicFormSubmitRouteImport.update({
-  id: '/api/public/form-submit',
-  path: '/api/public/form-submit',
-  getParentRoute: () => rootRouteImport,
+const FrLocationsPensacolaRoute = FrLocationsPensacolaRouteImport.update({
+  id: '/locations/pensacola',
+  path: '/locations/pensacola',
+  getParentRoute: () => FrRoute,
 } as any)
+const FrLocationsTampaRoute = FrLocationsTampaRouteImport.update({
+  id: '/locations/tampa',
+  path: '/locations/tampa',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrLocationsWestPalmBeachRoute =
+  FrLocationsWestPalmBeachRouteImport.update({
+    id: '/locations/west-palm-beach',
+    path: '/locations/west-palm-beach',
+    getParentRoute: () => FrRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -270,9 +288,12 @@ export interface FileRoutesByFullPath {
   '/claims': typeof ClaimsRoute
   '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/port-st-lucie-claim-review': typeof PortStLucieClaimReviewRoute
   '/privacy': typeof PrivacyRoute
+  '/psl': typeof PslRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/api/psl-lead': typeof ApiPslLeadRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/fr/about': typeof FrAboutRoute
   '/fr/blog': typeof FrBlogRoute
@@ -313,9 +334,12 @@ export interface FileRoutesByTo {
   '/claims': typeof ClaimsRoute
   '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/port-st-lucie-claim-review': typeof PortStLucieClaimReviewRoute
   '/privacy': typeof PrivacyRoute
+  '/psl': typeof PslRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/api/psl-lead': typeof ApiPslLeadRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/fr/about': typeof FrAboutRoute
   '/fr/blog': typeof FrBlogRoute
@@ -357,9 +381,12 @@ export interface FileRoutesById {
   '/claims': typeof ClaimsRoute
   '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/port-st-lucie-claim-review': typeof PortStLucieClaimReviewRoute
   '/privacy': typeof PrivacyRoute
+  '/psl': typeof PslRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/api/psl-lead': typeof ApiPslLeadRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/fr/about': typeof FrAboutRoute
   '/fr/blog': typeof FrBlogRoute
@@ -402,9 +429,12 @@ export interface FileRouteTypes {
     | '/claims'
     | '/contact'
     | '/fr'
+    | '/port-st-lucie-claim-review'
     | '/privacy'
+    | '/psl'
     | '/services'
     | '/terms'
+    | '/api/psl-lead'
     | '/blog/$slug'
     | '/fr/about'
     | '/fr/blog'
@@ -445,9 +475,12 @@ export interface FileRouteTypes {
     | '/claims'
     | '/contact'
     | '/fr'
+    | '/port-st-lucie-claim-review'
     | '/privacy'
+    | '/psl'
     | '/services'
     | '/terms'
+    | '/api/psl-lead'
     | '/blog/$slug'
     | '/fr/about'
     | '/fr/blog'
@@ -488,9 +521,12 @@ export interface FileRouteTypes {
     | '/claims'
     | '/contact'
     | '/fr'
+    | '/port-st-lucie-claim-review'
     | '/privacy'
+    | '/psl'
     | '/services'
     | '/terms'
+    | '/api/psl-lead'
     | '/blog/$slug'
     | '/fr/about'
     | '/fr/blog'
@@ -532,9 +568,12 @@ export interface RootRouteChildren {
   ClaimsRoute: typeof ClaimsRoute
   ContactRoute: typeof ContactRoute
   FrRoute: typeof FrRouteWithChildren
+  PortStLucieClaimReviewRoute: typeof PortStLucieClaimReviewRoute
   PrivacyRoute: typeof PrivacyRoute
+  PslRoute: typeof PslRoute
   ServicesRoute: typeof ServicesRoute
   TermsRoute: typeof TermsRoute
+  ApiPslLeadRoute: typeof ApiPslLeadRoute
   LocationsFortLauderdaleRoute: typeof LocationsFortLauderdaleRoute
   LocationsMiamiRoute: typeof LocationsMiamiRoute
   LocationsNaplesRoute: typeof LocationsNaplesRoute
@@ -552,53 +591,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/terms': {
-      id: '/terms'
-      path: '/terms'
-      fullPath: '/terms'
-      preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fr': {
-      id: '/fr'
-      path: '/fr'
-      fullPath: '/fr'
-      preLoaderRoute: typeof FrRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/claims': {
-      id: '/claims'
-      path: '/claims'
-      fullPath: '/claims'
-      preLoaderRoute: typeof ClaimsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -608,130 +605,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/professional-services/': {
-      id: '/professional-services/'
-      path: '/professional-services'
-      fullPath: '/professional-services/'
-      preLoaderRoute: typeof ProfessionalServicesIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/': {
-      id: '/locations/'
-      path: '/locations'
-      fullPath: '/locations/'
-      preLoaderRoute: typeof LocationsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/professional-services/umpire': {
-      id: '/professional-services/umpire'
-      path: '/professional-services/umpire'
-      fullPath: '/professional-services/umpire'
-      preLoaderRoute: typeof ProfessionalServicesUmpireRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/professional-services/expert-witness': {
-      id: '/professional-services/expert-witness'
-      path: '/professional-services/expert-witness'
-      fullPath: '/professional-services/expert-witness'
-      preLoaderRoute: typeof ProfessionalServicesExpertWitnessRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/professional-services/appraisal': {
-      id: '/professional-services/appraisal'
-      path: '/professional-services/appraisal'
-      fullPath: '/professional-services/appraisal'
-      preLoaderRoute: typeof ProfessionalServicesAppraisalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/west-palm-beach': {
-      id: '/locations/west-palm-beach'
-      path: '/locations/west-palm-beach'
-      fullPath: '/locations/west-palm-beach'
-      preLoaderRoute: typeof LocationsWestPalmBeachRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/tampa': {
-      id: '/locations/tampa'
-      path: '/locations/tampa'
-      fullPath: '/locations/tampa'
-      preLoaderRoute: typeof LocationsTampaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/pensacola': {
-      id: '/locations/pensacola'
-      path: '/locations/pensacola'
-      fullPath: '/locations/pensacola'
-      preLoaderRoute: typeof LocationsPensacolaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/orlando': {
-      id: '/locations/orlando'
-      path: '/locations/orlando'
-      fullPath: '/locations/orlando'
-      preLoaderRoute: typeof LocationsOrlandoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/naples': {
-      id: '/locations/naples'
-      path: '/locations/naples'
-      fullPath: '/locations/naples'
-      preLoaderRoute: typeof LocationsNaplesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/miami': {
-      id: '/locations/miami'
-      path: '/locations/miami'
-      fullPath: '/locations/miami'
-      preLoaderRoute: typeof LocationsMiamiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations/fort-lauderdale': {
-      id: '/locations/fort-lauderdale'
-      path: '/locations/fort-lauderdale'
-      fullPath: '/locations/fort-lauderdale'
-      preLoaderRoute: typeof LocationsFortLauderdaleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fr/terms': {
-      id: '/fr/terms'
-      path: '/terms'
-      fullPath: '/fr/terms'
-      preLoaderRoute: typeof FrTermsRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/services': {
-      id: '/fr/services'
-      path: '/services'
-      fullPath: '/fr/services'
-      preLoaderRoute: typeof FrServicesRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/privacy': {
-      id: '/fr/privacy'
-      path: '/privacy'
-      fullPath: '/fr/privacy'
-      preLoaderRoute: typeof FrPrivacyRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/contact': {
-      id: '/fr/contact'
-      path: '/contact'
-      fullPath: '/fr/contact'
-      preLoaderRoute: typeof FrContactRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/claims': {
-      id: '/fr/claims'
+    '/claims': {
+      id: '/claims'
       path: '/claims'
-      fullPath: '/fr/claims'
-      preLoaderRoute: typeof FrClaimsRouteImport
+      fullPath: '/claims'
+      preLoaderRoute: typeof ClaimsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr': {
+      id: '/fr'
+      path: '/fr'
+      fullPath: '/fr'
+      preLoaderRoute: typeof FrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/port-st-lucie-claim-review': {
+      id: '/port-st-lucie-claim-review'
+      path: '/port-st-lucie-claim-review'
+      fullPath: '/port-st-lucie-claim-review'
+      preLoaderRoute: typeof PortStLucieClaimReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/psl': {
+      id: '/psl'
+      path: '/psl'
+      fullPath: '/psl'
+      preLoaderRoute: typeof PslRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/psl-lead': {
+      id: '/api/psl-lead'
+      path: '/api/psl-lead'
+      fullPath: '/api/psl-lead'
+      preLoaderRoute: typeof ApiPslLeadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/fr/about': {
+      id: '/fr/about'
+      path: '/about'
+      fullPath: '/fr/about'
+      preLoaderRoute: typeof FrAboutRouteImport
       parentRoute: typeof FrRoute
     }
     '/fr/blog': {
@@ -741,81 +696,137 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrBlogRouteImport
       parentRoute: typeof FrRoute
     }
-    '/fr/about': {
-      id: '/fr/about'
-      path: '/about'
-      fullPath: '/fr/about'
-      preLoaderRoute: typeof FrAboutRouteImport
+    '/fr/claims': {
+      id: '/fr/claims'
+      path: '/claims'
+      fullPath: '/fr/claims'
+      preLoaderRoute: typeof FrClaimsRouteImport
       parentRoute: typeof FrRoute
     }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRoute
+    '/fr/contact': {
+      id: '/fr/contact'
+      path: '/contact'
+      fullPath: '/fr/contact'
+      preLoaderRoute: typeof FrContactRouteImport
+      parentRoute: typeof FrRoute
     }
-    '/fr/locations/': {
-      id: '/fr/locations/'
+    '/fr/privacy': {
+      id: '/fr/privacy'
+      path: '/privacy'
+      fullPath: '/fr/privacy'
+      preLoaderRoute: typeof FrPrivacyRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/services': {
+      id: '/fr/services'
+      path: '/services'
+      fullPath: '/fr/services'
+      preLoaderRoute: typeof FrServicesRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/terms': {
+      id: '/fr/terms'
+      path: '/terms'
+      fullPath: '/fr/terms'
+      preLoaderRoute: typeof FrTermsRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/locations/': {
+      id: '/locations/'
       path: '/locations'
-      fullPath: '/fr/locations/'
-      preLoaderRoute: typeof FrLocationsIndexRouteImport
-      parentRoute: typeof FrRoute
+      fullPath: '/locations/'
+      preLoaderRoute: typeof LocationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/fr/locations/west-palm-beach': {
-      id: '/fr/locations/west-palm-beach'
-      path: '/locations/west-palm-beach'
-      fullPath: '/fr/locations/west-palm-beach'
-      preLoaderRoute: typeof FrLocationsWestPalmBeachRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/locations/tampa': {
-      id: '/fr/locations/tampa'
-      path: '/locations/tampa'
-      fullPath: '/fr/locations/tampa'
-      preLoaderRoute: typeof FrLocationsTampaRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/locations/pensacola': {
-      id: '/fr/locations/pensacola'
-      path: '/locations/pensacola'
-      fullPath: '/fr/locations/pensacola'
-      preLoaderRoute: typeof FrLocationsPensacolaRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/locations/orlando': {
-      id: '/fr/locations/orlando'
-      path: '/locations/orlando'
-      fullPath: '/fr/locations/orlando'
-      preLoaderRoute: typeof FrLocationsOrlandoRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/locations/naples': {
-      id: '/fr/locations/naples'
-      path: '/locations/naples'
-      fullPath: '/fr/locations/naples'
-      preLoaderRoute: typeof FrLocationsNaplesRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/locations/miami': {
-      id: '/fr/locations/miami'
-      path: '/locations/miami'
-      fullPath: '/fr/locations/miami'
-      preLoaderRoute: typeof FrLocationsMiamiRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/locations/fort-lauderdale': {
-      id: '/fr/locations/fort-lauderdale'
+    '/locations/fort-lauderdale': {
+      id: '/locations/fort-lauderdale'
       path: '/locations/fort-lauderdale'
-      fullPath: '/fr/locations/fort-lauderdale'
-      preLoaderRoute: typeof FrLocationsFortLauderdaleRouteImport
-      parentRoute: typeof FrRoute
+      fullPath: '/locations/fort-lauderdale'
+      preLoaderRoute: typeof LocationsFortLauderdaleRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/blog/page/3': {
-      id: '/blog/page/3'
-      path: '/page/3'
-      fullPath: '/blog/page/3'
-      preLoaderRoute: typeof BlogPage3RouteImport
+    '/locations/miami': {
+      id: '/locations/miami'
+      path: '/locations/miami'
+      fullPath: '/locations/miami'
+      preLoaderRoute: typeof LocationsMiamiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/naples': {
+      id: '/locations/naples'
+      path: '/locations/naples'
+      fullPath: '/locations/naples'
+      preLoaderRoute: typeof LocationsNaplesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/orlando': {
+      id: '/locations/orlando'
+      path: '/locations/orlando'
+      fullPath: '/locations/orlando'
+      preLoaderRoute: typeof LocationsOrlandoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/pensacola': {
+      id: '/locations/pensacola'
+      path: '/locations/pensacola'
+      fullPath: '/locations/pensacola'
+      preLoaderRoute: typeof LocationsPensacolaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/tampa': {
+      id: '/locations/tampa'
+      path: '/locations/tampa'
+      fullPath: '/locations/tampa'
+      preLoaderRoute: typeof LocationsTampaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/west-palm-beach': {
+      id: '/locations/west-palm-beach'
+      path: '/locations/west-palm-beach'
+      fullPath: '/locations/west-palm-beach'
+      preLoaderRoute: typeof LocationsWestPalmBeachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/professional-services/': {
+      id: '/professional-services/'
+      path: '/professional-services'
+      fullPath: '/professional-services/'
+      preLoaderRoute: typeof ProfessionalServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/professional-services/appraisal': {
+      id: '/professional-services/appraisal'
+      path: '/professional-services/appraisal'
+      fullPath: '/professional-services/appraisal'
+      preLoaderRoute: typeof ProfessionalServicesAppraisalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/professional-services/expert-witness': {
+      id: '/professional-services/expert-witness'
+      path: '/professional-services/expert-witness'
+      fullPath: '/professional-services/expert-witness'
+      preLoaderRoute: typeof ProfessionalServicesExpertWitnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/professional-services/umpire': {
+      id: '/professional-services/umpire'
+      path: '/professional-services/umpire'
+      fullPath: '/professional-services/umpire'
+      preLoaderRoute: typeof ProfessionalServicesUmpireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/form-submit': {
+      id: '/api/public/form-submit'
+      path: '/api/public/form-submit'
+      fullPath: '/api/public/form-submit'
+      preLoaderRoute: typeof ApiPublicFormSubmitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/category/$category': {
+      id: '/blog/category/$category'
+      path: '/category/$category'
+      fullPath: '/blog/category/$category'
+      preLoaderRoute: typeof BlogCategoryCategoryRouteImport
       parentRoute: typeof BlogRoute
     }
     '/blog/page/2': {
@@ -825,19 +836,68 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogPage2RouteImport
       parentRoute: typeof BlogRoute
     }
-    '/blog/category/$category': {
-      id: '/blog/category/$category'
-      path: '/category/$category'
-      fullPath: '/blog/category/$category'
-      preLoaderRoute: typeof BlogCategoryCategoryRouteImport
+    '/blog/page/3': {
+      id: '/blog/page/3'
+      path: '/page/3'
+      fullPath: '/blog/page/3'
+      preLoaderRoute: typeof BlogPage3RouteImport
       parentRoute: typeof BlogRoute
     }
-    '/api/public/form-submit': {
-      id: '/api/public/form-submit'
-      path: '/api/public/form-submit'
-      fullPath: '/api/public/form-submit'
-      preLoaderRoute: typeof ApiPublicFormSubmitRouteImport
-      parentRoute: typeof rootRouteImport
+    '/fr/locations/': {
+      id: '/fr/locations/'
+      path: '/locations'
+      fullPath: '/fr/locations/'
+      preLoaderRoute: typeof FrLocationsIndexRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/locations/fort-lauderdale': {
+      id: '/fr/locations/fort-lauderdale'
+      path: '/locations/fort-lauderdale'
+      fullPath: '/fr/locations/fort-lauderdale'
+      preLoaderRoute: typeof FrLocationsFortLauderdaleRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/locations/miami': {
+      id: '/fr/locations/miami'
+      path: '/locations/miami'
+      fullPath: '/fr/locations/miami'
+      preLoaderRoute: typeof FrLocationsMiamiRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/locations/naples': {
+      id: '/fr/locations/naples'
+      path: '/locations/naples'
+      fullPath: '/fr/locations/naples'
+      preLoaderRoute: typeof FrLocationsNaplesRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/locations/orlando': {
+      id: '/fr/locations/orlando'
+      path: '/locations/orlando'
+      fullPath: '/fr/locations/orlando'
+      preLoaderRoute: typeof FrLocationsOrlandoRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/locations/pensacola': {
+      id: '/fr/locations/pensacola'
+      path: '/locations/pensacola'
+      fullPath: '/fr/locations/pensacola'
+      preLoaderRoute: typeof FrLocationsPensacolaRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/locations/tampa': {
+      id: '/fr/locations/tampa'
+      path: '/locations/tampa'
+      fullPath: '/fr/locations/tampa'
+      preLoaderRoute: typeof FrLocationsTampaRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/locations/west-palm-beach': {
+      id: '/fr/locations/west-palm-beach'
+      path: '/locations/west-palm-beach'
+      fullPath: '/fr/locations/west-palm-beach'
+      preLoaderRoute: typeof FrLocationsWestPalmBeachRouteImport
+      parentRoute: typeof FrRoute
     }
   }
 }
@@ -903,9 +963,12 @@ const rootRouteChildren: RootRouteChildren = {
   ClaimsRoute: ClaimsRoute,
   ContactRoute: ContactRoute,
   FrRoute: FrRouteWithChildren,
+  PortStLucieClaimReviewRoute: PortStLucieClaimReviewRoute,
   PrivacyRoute: PrivacyRoute,
+  PslRoute: PslRoute,
   ServicesRoute: ServicesRoute,
   TermsRoute: TermsRoute,
+  ApiPslLeadRoute: ApiPslLeadRoute,
   LocationsFortLauderdaleRoute: LocationsFortLauderdaleRoute,
   LocationsMiamiRoute: LocationsMiamiRoute,
   LocationsNaplesRoute: LocationsNaplesRoute,
