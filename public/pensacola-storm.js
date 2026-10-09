@@ -1,6 +1,7 @@
 (function () {
-  var form = document.getElementById('pensacolaStormClaimReview');
+  var form = document.querySelector('form[data-campaign]');
   if (!form) return;
+  var campaign = form.getAttribute('data-campaign');
   var query = new URLSearchParams(window.location.search);
   ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (name) {
     var input = form.elements.namedItem(name);
@@ -8,7 +9,7 @@
   });
   function track(event, details) {
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(Object.assign({ event: event, campaign: 'pensacola_storm_2026' }, details || {}));
+    window.dataLayer.push(Object.assign({ event: event, campaign: campaign }, details || {}));
   }
   track('campaign_landing_view');
   document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {

@@ -2324,3 +2324,8 @@ textarea.form-control {
     width: 100%;
   }
 }
+
+/* Storm campaign alert inside homepage hero */
+.storm-alert { display: inline-block; background: #e98642; color: #172638; padding: 0.8rem 1.6rem; border-radius: 4px; font-size: 1.5rem; line-height: 1.5; margin: 2.4rem 0 0; max-width: 100%; }
+.storm-alert a { color: #082f56; font-weight: 700; text-decoration: underline; }
+.hero:has(.storm-alert) { height: auto; min-height: 100vh; padding: 15rem 0 5rem; }
