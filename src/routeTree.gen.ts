@@ -14,6 +14,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PslRouteImport } from './routes/psl'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PortStLucieClaimReviewRouteImport } from './routes/port-st-lucie-claim-review'
+import { Route as PensacolaStormClaimReviewRouteImport } from './routes/pensacola-storm-claim-review'
 import { Route as FrRouteImport } from './routes/fr'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ClaimsRouteImport } from './routes/claims'
@@ -79,6 +80,12 @@ const PortStLucieClaimReviewRoute = PortStLucieClaimReviewRouteImport.update({
   path: '/port-st-lucie-claim-review',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PensacolaStormClaimReviewRoute =
+  PensacolaStormClaimReviewRouteImport.update({
+    id: '/pensacola-storm-claim-review',
+    path: '/pensacola-storm-claim-review',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const FrRoute = FrRouteImport.update({
   id: '/fr',
   path: '/fr',
@@ -288,6 +295,7 @@ export interface FileRoutesByFullPath {
   '/claims': typeof ClaimsRoute
   '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/pensacola-storm-claim-review': typeof PensacolaStormClaimReviewRoute
   '/port-st-lucie-claim-review': typeof PortStLucieClaimReviewRoute
   '/privacy': typeof PrivacyRoute
   '/psl': typeof PslRoute
@@ -334,6 +342,7 @@ export interface FileRoutesByTo {
   '/claims': typeof ClaimsRoute
   '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/pensacola-storm-claim-review': typeof PensacolaStormClaimReviewRoute
   '/port-st-lucie-claim-review': typeof PortStLucieClaimReviewRoute
   '/privacy': typeof PrivacyRoute
   '/psl': typeof PslRoute
@@ -381,6 +390,7 @@ export interface FileRoutesById {
   '/claims': typeof ClaimsRoute
   '/contact': typeof ContactRoute
   '/fr': typeof FrRouteWithChildren
+  '/pensacola-storm-claim-review': typeof PensacolaStormClaimReviewRoute
   '/port-st-lucie-claim-review': typeof PortStLucieClaimReviewRoute
   '/privacy': typeof PrivacyRoute
   '/psl': typeof PslRoute
@@ -429,6 +439,7 @@ export interface FileRouteTypes {
     | '/claims'
     | '/contact'
     | '/fr'
+    | '/pensacola-storm-claim-review'
     | '/port-st-lucie-claim-review'
     | '/privacy'
     | '/psl'
@@ -475,6 +486,7 @@ export interface FileRouteTypes {
     | '/claims'
     | '/contact'
     | '/fr'
+    | '/pensacola-storm-claim-review'
     | '/port-st-lucie-claim-review'
     | '/privacy'
     | '/psl'
@@ -521,6 +533,7 @@ export interface FileRouteTypes {
     | '/claims'
     | '/contact'
     | '/fr'
+    | '/pensacola-storm-claim-review'
     | '/port-st-lucie-claim-review'
     | '/privacy'
     | '/psl'
@@ -568,6 +581,7 @@ export interface RootRouteChildren {
   ClaimsRoute: typeof ClaimsRoute
   ContactRoute: typeof ContactRoute
   FrRoute: typeof FrRouteWithChildren
+  PensacolaStormClaimReviewRoute: typeof PensacolaStormClaimReviewRoute
   PortStLucieClaimReviewRoute: typeof PortStLucieClaimReviewRoute
   PrivacyRoute: typeof PrivacyRoute
   PslRoute: typeof PslRoute
@@ -624,6 +638,13 @@ declare module '@tanstack/react-router' {
       path: '/port-st-lucie-claim-review'
       fullPath: '/port-st-lucie-claim-review'
       preLoaderRoute: typeof PortStLucieClaimReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pensacola-storm-claim-review': {
+      id: '/pensacola-storm-claim-review'
+      path: '/pensacola-storm-claim-review'
+      fullPath: '/pensacola-storm-claim-review'
+      preLoaderRoute: typeof PensacolaStormClaimReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fr': {
@@ -963,6 +984,7 @@ const rootRouteChildren: RootRouteChildren = {
   ClaimsRoute: ClaimsRoute,
   ContactRoute: ContactRoute,
   FrRoute: FrRouteWithChildren,
+  PensacolaStormClaimReviewRoute: PensacolaStormClaimReviewRoute,
   PortStLucieClaimReviewRoute: PortStLucieClaimReviewRoute,
   PrivacyRoute: PrivacyRoute,
   PslRoute: PslRoute,
