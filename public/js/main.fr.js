@@ -16,17 +16,17 @@ class HeroSlider {
     constructor() {
         this.slides = [
             {
-                image: 'img/hero-1.jpg.jpg',
+                image: 'img/hero-1.jpg',
                 title: "Expert public en Floride pour les réclamations complexes, refusées ou sous-payées",
                 subtitle: "David Messeri représente les propriétaires, entreprises et associations dans toute la Floride."
             },
             {
-                image: 'img/hero-2.jpg.jpg',
+                image: 'img/hero-2.jpg',
                 title: "Une documentation détaillée pour les sinistres immobiliers",
                 subtitle: "Nous inspectons le sinistre, préparons les estimations, organisons les preuves et communiquons avec l'assureur."
             },
             {
-                image: 'img/hero-3.jpg.jpg',
+                image: 'img/hero-3.jpg',
                 title: "Une démarche claire pour une réclamation complexe",
                 subtitle: "Une défense des assurés dirigée personnellement par David Messeri, expert public agréé en Floride."
             }
