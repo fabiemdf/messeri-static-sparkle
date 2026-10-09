@@ -97,8 +97,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Florida policyholder representation, insurance appraisal, umpire, and technical claim consulting led by David Messeri.",
       },
-      { property: "og:image", content: "https://messeriassociates.com/img/hero-1.jpg.jpg" },
-      { name: "twitter:image", content: "https://messeriassociates.com/img/hero-1.jpg.jpg" },
+      { property: "og:image", content: "https://messeriassociates.com/img/hero-1.jpg" },
+      { name: "twitter:image", content: "https://messeriassociates.com/img/hero-1.jpg" },
     ],
     links: [
       {

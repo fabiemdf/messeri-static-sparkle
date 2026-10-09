@@ -16,17 +16,17 @@ class HeroSlider {
     constructor() {
         this.slides = [
             {
-                image: 'img/hero-1.jpg.jpg',
+                image: 'img/hero-1.jpg',
                 title: 'Florida Public Adjuster for Denied, Underpaid & Complex Property Claims',
                 subtitle: 'David Messeri represents homeowners, commercial property owners, and associations throughout Florida.'
             },
             {
-                image: 'img/hero-2.jpg.jpg',
+                image: 'img/hero-2.jpg',
                 title: 'Detailed Claim Documentation for Florida Property Owners',
                 subtitle: 'We inspect the loss, prepare estimates, organize the evidence, and communicate with the carrier on your behalf.'
             },
             {
-                image: 'img/hero-3.jpg.jpg',
+                image: 'img/hero-3.jpg',
                 title: 'A Clear Path Through a Complex Property Claim',
                 subtitle: 'Policyholder advocacy led personally by licensed Florida public adjuster David Messeri.'
             }
